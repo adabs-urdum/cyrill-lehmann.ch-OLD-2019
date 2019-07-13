@@ -1,0 +1,230 @@
+.fish
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: darken(IrisColor, 50%);
+  background-image: radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1));
+  border-radius: 50% 50% 30% 30%;
+  box-shadow: inset 0 0 BS*15 rgba(255,255,255,0.6);
+  overflow: hidden;
+  z-index: 5;
+  &:after
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40% 40% 10% 10%;
+    background-image: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 60%);
+  &:before
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 30% 30%;
+    background-image: radial-gradient(circle at 60% 10%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 40%);
+  &__wrapper
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: BS * 550;
+    height: BS * 500;
+    transform: translate(-50%, -50%);
+  &__eyes
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto BS*70;
+  &__gills_wrapper
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    margin-bottom: BS * 70;
+  &__gill
+    width: 100%;
+    height: BS * 10;
+    background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+    box-shadow: inset 0 0 BS*7 rgba(0,0,0,0.9);
+    animation: BREATH 5.5s infinite;
+    border-radius: BS * 5;
+    for num in (1..6)
+      &:nth-child({num})
+        animation-delay: 0.1s * num;
+  &__gills
+    width: BS * 150;
+    height: 100%;
+    &--left, &--right, &--center
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    &--left
+      transform: skewX(-20deg) skewY(5deg);
+    &--center
+      transform: translateY(10%) scaleY(1.05);
+    &--right
+      transform: skewX(20deg) skewY(-5deg);
+  &__donut
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: BS * 90;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center, lighten(BlinkLightColor, 70%), BlinkLightColor 90%, rgba(0,0,0,1));
+    box-shadow: 0 0 BS*70 rgba(255,255,255,1);
+    border-radius: 50%;
+    overflow: hidden;
+    &:before
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1*BS rgba(255,255,255,0.5) solid;
+      box-shadow: inset 0 0 BS*10 rgba(0,0,0,0.5);
+      box-sizing: border-box;
+    &--top
+      width: BS * 1200;
+      height: BS * 1200;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      box-shadow: none;
+      opacity: 0.5;
+      background-image: radial-gradient(circle at center, rgba(255,255,255,0.4), rgba(255,255,255,0) 50%);
+      &:before
+        content: none;
+  &__tentacles
+    display: flex;
+    z-index: 4;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateY(-50%);
+  &__tentacle
+    position: relative;
+    width: BS * 50;
+    height: BS * 250;
+    box-shadow: inset 0 0 BS*10 rgba(255,255,255,0.6);
+    border-radius: BS*25;
+    background: linear-gradient(transparent,darken(IrisColor, 90%));
+    margin: 0 BS*10;
+    animation: LEG_BUMBLING infinite;
+    transform-origin: center top;
+    &:before
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: BS * 50;
+      height: BS * 200;
+      border-radius: BS * 20;
+      background: radial-gradient(ellipse at right bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.2), rgba(255,255,255,0) 50%);
+    &:after
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: BS*20
+      // background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);
+    &:nth-child(1)
+      animation-duration: 8s
+      top: BS * 30;
+    &:nth-child(2)
+      animation-duration: 7.5s
+      top: BS * 10;
+    &:nth-child(3)
+      animation-duration: 8.5s
+      top: BS * 40;
+    &:nth-child(4)
+      animation-duration: 8.25s
+      top: BS * 20;
+    &:nth-child(5)
+      animation-duration: 7.75s
+      top: BS * 50;
+
+
+@keyframes LEG_BUMBLING {
+  0%{
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+  50%{
+    transform: translate(0, BS*50) scale(1.15);
+  }
+  100%{
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+}
+
+
+@keyframes BREATH {
+  80%{
+    height: BS * 10;
+    background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+  }
+  87%{
+    height: BS * 20;
+    background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+  }
+  90%{
+    height: BS * 5;
+    background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+  }
+  100%{
+    height: BS * 10;
+    background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+  }
+}
+
+
+@media BreakpointM
+  .fish
+    &__wrapper
+      width: BS * 850;
+      height: BS * 800;
+    &__gills_wrapper
+      margin-bottom: BS * 120;
+    &__gills
+      width: BS * 220;
+    &__gill
+      height: BS * 20;
+      animation: BREATH-M 5.5s infinite;
+    &__eyes
+      margin: 0 auto BS*120;
+    &__tentacle
+      width: BS * 60;
+      height: BS * 400;
+      box-shadow: inset 0 0 BS*15 rgba(255,255,255,0.6);
+      border-radius: BS*30;
+      margin: 0 BS*20;
+      &:before
+        width: BS * 60;
+        height: BS * 400;
+    @keyframes BREATH-M {
+      80%{
+        height: BS * 20;
+        background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+      }
+      87%{
+        height: BS * 30;
+        background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+      }
+      90%{
+        height: BS * 15;
+        background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+      }
+      100%{
+        height: BS * 20;
+        background: linear-gradient(rgba(255,255,255,0.5), darken(IrisColor, 95%) 20%);
+      }
+    }
