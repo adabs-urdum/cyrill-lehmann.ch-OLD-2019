@@ -255,3 +255,24 @@ Observer({
   maxScaleIris: 0.10,
   threshold: 110,
 });
+
+function AgeCount(){
+
+  const ageSpan = document.getElementById('ageSeconds');
+  let age = parseInt(ageSpan.innerText);
+
+  const runCounter = () => {
+    setInterval(() => {
+      age += 1
+      ageSpan.innerText = age;
+    }, 1000);
+  }
+
+  const init = () => {
+    runCounter();
+  }
+
+  init();
+}
+
+AgeCount();

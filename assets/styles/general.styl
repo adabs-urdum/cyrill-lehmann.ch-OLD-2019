@@ -5,7 +5,7 @@ html
   line-height 120%
   color White
   overflow-x: hidden;
-  background: darken(#0F00B3, 85%);
+  background: radial-gradient(circle at center top, darken(#0F00B3, 90%) 45%, darken(#0F00B3, 85%) 80%), darken(#0F00B3, 85%);
 
 h1, h2, h3, h4, h5, h6
   margin 0
@@ -42,7 +42,7 @@ a
   display inline-block
   text-decoration none
   color inherit
-  transition transform 0.3s ease-out
+  transition transform 0.3s ease-out, color 0.3s ease-out;
   &:hover
     transform scale(1.03)
     &:after
