@@ -27,6 +27,7 @@
   	<meta property="og:title" content="Cyrill Lehmann, WebDev by chance" />
   	<meta property="og:url" content="https://www.cyrill-lehmann.ch" />
   	<meta property="og:type" content=”website” />
+    <meta property="og:image" content="./dist/screenshots/portfolio.jpg" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143821656-1"></script>
     <script>
@@ -36,8 +37,8 @@
 
       gtag('config', 'UA-143821656-1', { 'anonymize_ip': true });
     </script>
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
   </head>
-  <link rel="stylesheet" href="./dist/css/styles.min.css">
   <body>
 
     <section class="observer">
@@ -150,6 +151,9 @@
         <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.facebook.com/cyrill.intressierts" target="_blank">facebook</a></li>
         <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.linkedin.com/in/cyrill-lehmann-500a55130/" target="_blank">linkedin</a></li>
         <li class="info__journey_listelement"><a rel="noreferrer" href="https://steamcommunity.com/profiles/76561198149743749/" target="_blank">steam</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.patreon.com/user/creators?u=5977648" target="_blank">patreon</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.udemy.com/user/cyrill-lehmann/" target="_blank">udemy</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://cssbattle.dev/player/adabs" target="_blank">cssbattle</a></li>
       </ul>
     </section>
 
