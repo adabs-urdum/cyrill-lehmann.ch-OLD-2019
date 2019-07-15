@@ -18,6 +18,8 @@
     flex-wrap: wrap;
   &__image
     width: 50%;
+    height: auto;
+    align-self: center;
     &:first-child
       width: 100%;
   &__text
@@ -65,3 +67,52 @@
       margin-right: 0;
       &:after
         content: none;
+
+
+@media BreakpointM
+  .showoff
+    bs-font-size(65);
+    &__title
+      bs-font-size(90);
+    &__grid
+      flex-direction: column;
+      margin-bottom: BS * 100;
+      &:last-child
+        margin-bottom: 0;
+      &:nth-child(even)
+        .showoff__text
+          text-align: left;
+        .showoff__toollist
+          justify-content: flex-start;
+    &__gridelement
+      width: 100%;
+
+
+@media BreakpointXS
+  .showoff
+    bs-font-size(120);
+    &__text
+      padding: BS * 100;
+    &__title
+      bs-font-size(160);
+      margin-bottom: BS * 80;
+    &__links
+      margin-bottom: BS * 80;
+    &__grid
+      flex-direction: column;
+      margin-bottom: BS * 300;
+      &:last-child
+        margin-bottom: 0;
+      &:nth-child(even)
+        .showoff__text
+          text-align: left;
+        .showoff__toollist
+          justify-content: flex-start;
+    &__toollistelement
+      margin-right: BS * 200;
+      &:after
+        right: BS * -100;
+        width: BS * 32;
+        height: BS * 32;
+    &__description
+      margin-bottom: BS * 80;

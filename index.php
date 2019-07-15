@@ -123,7 +123,7 @@
       <ul class="info__journey_list">
         <li class="info__journey_listelement info__journey_listelement--title">dayjob</li>
         <li class="info__journey_listelement">webdev</li>
-        <li class="info__journey_listelement"><a href="https://clus.ch" target="_blank">clus</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://clus.ch" target="_blank">clus</a></li>
       </ul>
       <ul class="info__journey_list">
         <li class="info__journey_listelement info__journey_listelement--title">interests</li>
@@ -144,12 +144,12 @@
       </ul>
       <ul class="info__journey_list">
         <li class="info__journey_listelement info__journey_listelement--title">online</li>
-        <li class="info__journey_listelement"><a href="https://github.com/adabs-urdum" target="_blank">github</a></li>
-        <li class="info__journey_listelement"><a href="mailto:cyrill@adabs.ch">email</a></li>
-        <li class="info__journey_listelement"><a href="https://www.instagram.com/adabs_urdum/" target="_blank">instagram</a></li>
-        <li class="info__journey_listelement"><a href="https://www.facebook.com/cyrill.intressierts" target="_blank">facebook</a></li>
-        <li class="info__journey_listelement"><a href="https://www.linkedin.com/in/cyrill-lehmann-500a55130/" target="_blank">linkedin</a></li>
-        <li class="info__journey_listelement"><a href="https://steamcommunity.com/profiles/76561198149743749/" target="_blank">steam</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://github.com/adabs-urdum" target="_blank">github</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="mailto:cyrill@adabs.ch">email</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.instagram.com/adabs_urdum/" target="_blank">instagram</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.facebook.com/cyrill.intressierts" target="_blank">facebook</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://www.linkedin.com/in/cyrill-lehmann-500a55130/" target="_blank">linkedin</a></li>
+        <li class="info__journey_listelement"><a rel="noreferrer" href="https://steamcommunity.com/profiles/76561198149743749/" target="_blank">steam</a></li>
       </ul>
     </section>
 
@@ -171,7 +171,7 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://cyrill-lehmann.ch/" target="_blank">cyrill-lehmann.ch</a>
+                  <a rel="noreferrer" href="https://cyrill-lehmann.ch/" target="_blank">cyrill-lehmann.ch</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
@@ -200,10 +200,10 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://smart-energy.ibc-chur.ch/" target="_blank">smart-energy.ibc-chur.ch</a>
+                  <a rel="noreferrer" href="https://smart-energy.ibc-chur.ch/" target="_blank">smart-energy.ibc-chur.ch</a>
                 </p>
                 <p>
-                  <a href="https://clus.ch/projekt/smart-energy/" target="_blank">clus</a>
+                  <a rel="noreferrer" href="https://clus.ch/projekt/smart-energy/" target="_blank">clus</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
@@ -231,7 +231,7 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://rubiksclus.cyrill-lehmann.ch/" target="_blank">rubiksclus.cyrill-lehmann.ch</a>
+                  <a rel="noreferrer" href="https://rubiksclus.cyrill-lehmann.ch/" target="_blank">rubiksclus.cyrill-lehmann.ch</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
@@ -255,7 +255,7 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://three2.cyrill-lehmann.ch" target="_blank">three2.cyrill-lehmann.ch (25mb pageload!)</a>
+                  <a rel="noreferrer" href="https://three2.cyrill-lehmann.ch" target="_blank">three2.cyrill-lehmann.ch (25mb pageload!)</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
@@ -284,7 +284,7 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://vsg.rtk.ch" target="_blank">vsg.rtk.ch</a>
+                  <a rel="noreferrer" href="https://vsg.rtk.ch" target="_blank">vsg.rtk.ch</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
@@ -315,13 +315,15 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://leafpi.adabs.ch/" target="_blank">leafpi.adabs.ch</a>
+                  <a rel="noreferrer" href="https://leafpi.adabs.ch/" target="_blank">leafpi.adabs.ch</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
                 <li class="showoff__toollistelement">react</li>
                 <li class="showoff__toollistelement">apache</li>
                 <li class="showoff__toollistelement">raspberrypi</li>
+                <li class="showoff__toollistelement">python</li>
+                <li class="showoff__toollistelement">php</li>
               </ul>
             </div>
           </div>
@@ -344,7 +346,7 @@
               </div>
               <div class="showoff__links">
                 <p>
-                  <a href="https://hartezeiten.ch/" target="_blank">hartezeiten.ch</a>
+                  <a rel="noreferrer" href="https://hartezeiten.ch/" target="_blank">hartezeiten.ch</a>
                 </p>
               </div>
               <ul class="showoff__toollist">
