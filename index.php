@@ -161,205 +161,231 @@
 
       <div class="showoff__wrapper">
 
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/portfolio.jpg" alt="cyrill-lehmann.ch">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">this very page</h2>
-              <div class="showoff__description">
-                <p>code and design</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://cyrill-lehmann.ch/" target="_blank">cyrill-lehmann.ch</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">javascript</li>
-                <li class="showoff__toollistelement">css</li>
-                <li class="showoff__toollistelement">not img</li>
-                <li class="showoff__toollistelement">not svg</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <?php
+          $projectList = [
+            'cyrill-lehmann.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/portfolio.jpg',
+                  'alt' => 'cyrill-lehmann.ch'
+                ]
+              ],
+              'title' => 'this very page',
+              'work' => 'code and design',
+              'links' => [
+                [
+                  'url' => 'https://cyrill-lehmann.ch/',
+                  'text' => 'cyrill-lehmann.ch'
+                ]
+              ],
+              'tools' => [
+                'javascript',
+                'css',
+                'not &lt;img&gt;',
+                'not &lt;svg&gt;',
+              ]
+            ],
+            'smart-energy.ibc-chur.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/smartenergy_2.jpg',
+                  'alt' => 'smart-energy.ibc-chur.ch'
+                ],
+                [
+                  'src' => './dist/screenshots/smartenergy_1.jpg',
+                  'alt' => 'smart-energy.ibc-chur.ch'
+                ],
+                [
+                  'src' => './dist/screenshots/smartenergy_3.jpg',
+                  'alt' => 'smart-energy.ibc-chur.ch'
+                ],
+              ],
+              'title' => 'smart check',
+              'work' => 'code',
+              'links' => [
+                [
+                  'url' => 'smart-energy.ibc-chur.ch',
+                  'text' => 'smart-energy.ibc-chur.ch'
+                ],
+                [
+                  'url' => 'https://clus.ch',
+                  'text' => 'clus'
+                ]
+              ],
+              'tools' => [
+                'wordpress',
+                'jquery',
+                'css translations',
+              ]
+            ],
+            'rubiksclus.cyrill-lehmann.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/rubiksclus_1.jpg',
+                  'alt' => 'rubiksclus.cyrill-lehmann.ch'
+                ],
+                [
+                  'src' => './dist/screenshots/rubiksclus_2.jpg',
+                  'alt' => 'rubiksclus.cyrill-lehmann.ch'
+                ],
+                [
+                  'src' => './dist/screenshots/rubiksclus_3.jpg',
+                  'alt' => 'rubiksclus.cyrill-lehmann.ch'
+                ],
+              ],
+              'title' => 'rubik\'s clus',
+              'work' => 'code and 3d',
+              'links' => [
+                [
+                  'url' => 'https://rubiksclus.cyrill-lehmann.ch/',
+                  'text' => 'rubiksclus.cyrill-lehmann.ch'
+                ]
+              ],
+              'tools' => [
+                'threejs',
+              ]
+            ],
+            'three2.cyrill-lehmann.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/envmap.jpg',
+                  'alt' => 'three2.cyrill-lehmann.ch'
+                ],
+              ],
+              'title' => 'threejs envmap',
+              'work' => 'code and 3d',
+              'links' => [
+                [
+                  'url' => 'https://three2.cyrill-lehmann.ch',
+                  'text' => 'three2.cyrill-lehmann.ch (25mb pageload!)'
+                ]
+              ],
+              'tools' => [
+                'threejs',
+              ]
+            ],
+            // 'vsg.rtk.ch' => [
+            //   'images' => [
+            //     [
+            //       'src' => './dist/screenshots/vsg_1.jpg',
+            //       'alt' => 'vsg.rtk.ch'
+            //     ],
+            //     [
+            //       'src' => './dist/screenshots/vsg_2.jpg',
+            //       'alt' => 'vsg.rtk.ch'
+            //     ],
+            //     [
+            //       'src' => './dist/screenshots/vsg_3.jpg',
+            //       'alt' => 'vsg.rtk.ch'
+            //     ],
+            //   ],
+            //   'title' => 'vsg.rtk.ch',
+            //   'work' => 'code and design',
+            //   'description' => 'multi step form with image upload, emails and save to database. using vanilla php on the backend.',
+            //   'links' => [
+            //     [
+            //       'url' => 'https://vsg.rtk.ch',
+            //       'text' => 'vsg.rtk.ch'
+            //     ]
+            //   ],
+            //   'tools' => [
+            //     'react',
+            //     'php',
+            //     'mysql',
+            //   ]
+            // ],
+            'vsg.rtk.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/leafpi_1.jpg',
+                  'alt' => 'leafpi'
+                ],
+                [
+                  'src' => './dist/screenshots/leafpi_2.jpg',
+                  'alt' => 'leafpi'
+                ],
+                [
+                  'src' => './dist/screenshots/leafpi_3.jpg',
+                  'alt' => 'leafpi'
+                ],
+              ],
+              'title' => 'leafpi',
+              'work' => 'idea, code and design',
+              'description' => 'configured a raspberry pi to control nanoleaf aurora light panels within same wifi',
+              'links' => [
+                [
+                  'url' => 'https://leafpi.adabs.ch/',
+                  'text' => 'leafpi.adabs.ch'
+                ]
+              ],
+              'tools' => [
+                'react',
+                'apache',
+                'raspberrypi',
+                'python',
+                'php',
+              ]
+            ],
+            'vsg.rtk.ch' => [
+              'images' => [
+                [
+                  'src' => './dist/screenshots/hartezeiten.jpg',
+                  'alt' => 'hartezeiten.ch'
+                ],
+              ],
+              'title' => 'hartezeiten.ch',
+              'work' => 'code',
+              'description' => 'small shop using stripe as payment method',
+              'links' => [
+                [
+                  'url' => 'https://hartezeiten.ch/',
+                  'text' => 'hartezeiten.ch'
+                ]
+              ],
+              'tools' => [
+                'react',
+                'processwire',
+              ]
+            ],
+          ];
+        ?>
 
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/smartenergy_2.jpg" alt="smart-energy.ibc-chur.ch">
-              <img class="showoff__image" src="./dist/screenshots/smartenergy_1.jpg" alt="smart-energy.ibc-chur.ch">
-              <img class="showoff__image" src="./dist/screenshots/smartenergy_3.jpg" alt="smart-energy.ibc-chur.ch">
+        <?php foreach( $projectList as $name => $project ): ?>
+          <div class="showoff__grid">
+            <div class="showoff__gridelement">
+              <div class="showoff__imagegrid">
+                <?php foreach( $project['images'] as $image ): ?>
+                  <img class="showoff__image" src="<?= $image['src'] ?>" alt="<?= $name ?>">
+                <?php endforeach; ?>
+              </div>
+            </div>
+            <div class="showoff__gridelement">
+              <div class="showoff__text">
+                <h2 class="showoff__title"><?= $project['title'] ?></h2>
+                <?php if(array_key_exists('description', $project)): ?>
+                  <div class="showoff__description">
+                    <p>multi step form with image upload, emails and save to database. using vanilla php on the backend.</p>
+                  </div>
+                <?php endif; ?>
+                <div class="showoff__description">
+                  <p><?= $project['work'] ?></p>
+                </div>
+                <div class="showoff__links">
+                  <?php foreach( $project['links'] as $link ): ?>
+                    <p>
+                      <a rel="noreferrer" href="<?= $link['url'] ?>" target="_blank"><?= $link['text'] ?></a>
+                    </p>
+                  <?php endforeach; ?>
+                </div>
+                <ul class="showoff__toollist">
+                  <?php foreach( $project['tools'] as $tool ): ?>
+                    <li class="showoff__toollistelement"><?= $tool ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">smart check</h2>
-              <div class="showoff__description">
-                <p>code</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://smart-energy.ibc-chur.ch/" target="_blank">smart-energy.ibc-chur.ch</a>
-                </p>
-                <p>
-                  <a rel="noreferrer" href="https://clus.ch/projekt/smart-energy/" target="_blank">clus</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">wordpress</li>
-                <li class="showoff__toollistelement">jquery</li>
-                <li class="showoff__toollistelement">css transitions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/rubiksclus_1.jpg" alt="rubiksclus.cyrill-lehmann.ch">
-              <img class="showoff__image" src="./dist/screenshots/rubiksclus_2.jpg" alt="rubiksclus.cyrill-lehmann.ch">
-              <img class="showoff__image" src="./dist/screenshots/rubiksclus_3.jpg" alt="rubiksclus.cyrill-lehmann.ch">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">rubik's clus</h2>
-              <div class="showoff__description">
-                <p>code and 3d</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://rubiksclus.cyrill-lehmann.ch/" target="_blank">rubiksclus.cyrill-lehmann.ch</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">threejs</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/envmap.jpg" alt="three2.cyrill-lehmann.ch">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">threejs envmap</h2>
-              <div class="showoff__description">
-                <p>code and 3d</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://three2.cyrill-lehmann.ch" target="_blank">three2.cyrill-lehmann.ch (25mb pageload!)</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">threejs</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/vsg_1.jpg" alt="vsg.rtk.ch">
-              <img class="showoff__image" src="./dist/screenshots/vsg_2.jpg" alt="vsg.rtk.ch">
-              <img class="showoff__image" src="./dist/screenshots/vsg_3.jpg" alt="vsg.rtk.ch">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">vsg.rtk.ch</h2>
-              <div class="showoff__description">
-                <p>multi step form with image upload, emails and save to database. using vanilla php on the backend.</p>
-              </div>
-              <div class="showoff__description">
-                <p>code and design</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://vsg.rtk.ch" target="_blank">vsg.rtk.ch</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">react</li>
-                <li class="showoff__toollistelement">php</li>
-                <li class="showoff__toollistelement">mysql</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/leafpi_1.jpg" alt="leafpi">
-              <img class="showoff__image" src="./dist/screenshots/leafpi_2.jpg" alt="leafpi">
-              <img class="showoff__image" src="./dist/screenshots/leafpi_3.jpg" alt="leafpi">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">leafpi</h2>
-              <div class="showoff__description">
-                <p>configured a raspberry pi to control nanoleaf aurora light panels within same wifi</p>
-              </div>
-              <div class="showoff__description">
-                <p>code and design</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://leafpi.adabs.ch/" target="_blank">leafpi.adabs.ch</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">react</li>
-                <li class="showoff__toollistelement">apache</li>
-                <li class="showoff__toollistelement">raspberrypi</li>
-                <li class="showoff__toollistelement">python</li>
-                <li class="showoff__toollistelement">php</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="showoff__grid">
-          <div class="showoff__gridelement">
-            <div class="showoff__imagegrid">
-              <img class="showoff__image" src="./dist/screenshots/hartezeiten.jpg" alt="hartezeiten.ch">
-            </div>
-          </div>
-          <div class="showoff__gridelement">
-            <div class="showoff__text">
-              <h2 class="showoff__title">harte zeiten für träumer</h2>
-              <div class="showoff__description">
-                <p>small shop using stripe as payment method</p>
-              </div>
-              <div class="showoff__description">
-                <p>code</p>
-              </div>
-              <div class="showoff__links">
-                <p>
-                  <a rel="noreferrer" href="https://hartezeiten.ch/" target="_blank">hartezeiten.ch</a>
-                </p>
-              </div>
-              <ul class="showoff__toollist">
-                <li class="showoff__toollistelement">processwire</li>
-                <li class="showoff__toollistelement">react</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
 
       </div>
 
